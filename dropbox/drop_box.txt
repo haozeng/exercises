@@ -1,0 +1,46 @@
+test
+
+Interview Question – Nothing really difficult or expected, but here are the questions from the phone interview:
+
+- What is a superpower you would give to your friend/family?
+- How would you measure user engagement and why?
+- Why did you pick your school?
+- What do you know about Dropbox?
+- How would you explain Dropbox to a grandmother? To a very technical person?
+- Tell me about your familiarity with using Dropbox?
+- If you have 1000 sales leads/inquiries a day, how would you prioritize them?   View Answer
+
+ Pretty standard questions. First interview involved finding the sum to a target in an array, second involved designing a log-hit counter for a website. I was allowed to write both in java. The questions weren't overly difficult, but they expected top-notch answers!
+
+ Interview Question – There was a single problem, requiring graphically printing a data structure.   Answer Question
+
+ Interview Question – Given a directory of files and folders (and relevant functions), how would you parse through it to find equivalent files?   Answer Question
+
+Interview Question – Describe what I thought a day of working at Dropbox was like.   Answer Question
+
+Interview Question – Write two functions, one that increments a log counter and another that gets the count of the logs from the last 5 minutes.   Answer Question
+
+Interview Question – Write a program that logs hits received in the past 15 minutes.   View Answer
+
+Interview Question – "Make a program that can print out the text form of numbers from 1 - 1000 (ex. 20 is "twenty", 105 is "one hundred and five")   Answer Question
+
+– Given an array of integers eg [1,2,-3,1] find whether there is a sub-sequence that sums to 0 and return it (eg 1,2,-3 or 2,-3,1)
+    Checking every sub-sequence is O(n^2) which is too inefficient
+
+Interview Question – design a spell-checking algorithm   Answer Question
+
+Interview Question – Given a string such as "123" or "67", write a function to output the number represented by the string without using casting.   View Answers (2)
+
+Interview Question – Write a function called eval, which takes a string and returns a boolean. This string is allowed 6 different characters: 0, 1, &, |, (, and ). Eval should evaluate the string as a boolean expression, where 0 is false, 1 is true, & is an and, and | is an or. An example string might look like "(0 | (1 | 0)) & (1 & ((1 | 0) & 0))"   View Answer
+
+Interview Questions
+given a number as a string write a algorithm to map to its oral description. I.e.
+
+"1" -> "11" //this can be thought of as there is one one.
+"11" -> "21" // there are two ones
+"21" -> "1211" // there is one two and one one
+"1211" -> "111221" ect. //there is one one, one two and two ones   View Answers (5)
+given the output from the first question write a algorithm to calculate how many possible inputs could have created that output. for example.
+
+"1211" could be interpreted as one two and one one || one hundred and twenty one ones.   View Answers (3)
+The final question was now given your algorithms compute the complexity of them.   View Answers (2)

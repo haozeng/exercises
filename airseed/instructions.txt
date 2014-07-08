@@ -1,0 +1,46 @@
+Data Parsing Challenge [~8 hrs]
+
+At Airseed, one of the biggest challenges we face is coming up with scalable yet simple solutions for data mining unstructured or semi-structured data. In this exercise, you are tasked with extracting a particular type of data (explained below) from the provided semi-structured order confirmation files.
+
+=== Dataset Details (Attached) ===
+
+- You are provided with four HTML files representing different vendor order confirmations: 
+  amazon.html
+  newegg.html
+  seamless.html
+  virgin.html
+
+- Go ahead and open each HTMl file in a browser of your choice. 
+
+- Notice that in each email, there is a 'series' of items present. 
+-- In the amazon.html file, the series of items is the products in the shopping cart that the buyer has 
+purchased, i.e. ('Emergen-C Vitamin..', '5-Hour Energy..', 'Welch's Fruit Snacks..', 'Nabisco Mini Snack..'). 
+-- In the newegg.html file, the series of items is also the products that the buyer has purchased, i.e.
+('NBM 2G|CRUC CT25664AC667 R', 'EXT SLIM DVD BURN LG|GSA-E50L LS RT').
+-- In the seamless.html file, the series of items is the menu items in the food order, i.e. ('Hong Kong-Style Noodle', 
+'Beef with Broccoli', 'Cilantro Shrimp Dumpling').
+-- In the virgin.html file, the series of items is the flights being taken, i.e (920 SF to LA, 949 LA to SF).
+
+=== Challenge:  Perform the following task using Ruby (preferred) / Python ===
+
+Write a program that takes an order confirmation file (amazon.html, virgin.html etc) as an input and extracts the series data present in that file. For each file, your program should output a list of 'items' and any relevant properties for each of the item. If your program requires additional input other than the order confirmation file, please specify what additional data/input is needed and why. The program should be abstracted to parse order confirmations from any vendor. 
+
+Running the program on virgin.html file should produce similar output to the following:
+[
+  {
+    "date": "19-May-2010",
+    "flight": "920",
+    "from": "SAN FRANCISCO, CA (SFO) 07:10 AM",
+    "to": "LOS ANGELES, CA (LAX) 08:25 AM"
+  },
+  {
+    "date": "20-May-2010",
+    "flight": "949",
+    "from": "LOS ANGELES, CA (LAX) 07:35 PM",
+    "to": "SAN FRANCISCO, CA (SFO) 08:55 PM"
+  }
+]
+
+You may want to use Nokogiri (Ruby) or Scrapy (Python) to simplify traversing and parsing the HTML files.
+
+Please include a README explaining how to configure and run your program.
