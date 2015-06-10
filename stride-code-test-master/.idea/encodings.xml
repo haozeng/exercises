@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java/.classpath" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java/.gitignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java/.project" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java/pom.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java/src" charset="UTF-8" />
+  </component>
+</project>
+

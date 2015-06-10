@@ -23,6 +23,17 @@ require 'pp'
 # puts permutation_on_lowercase('ab')
 # puts permutation_on_lowercase('abc')
 
+
+# sudo code:
+
+# 1. return empty array if word size is 0
+#    return itself if word size is 1
+# 2. split the first word from string, and put the reminder into the recursive function.
+# 3. array of different formats should be returned from the resurive functions,
+#    for each word in this array, we want to insert the first word into different locations
+#    of the word
+# 4. return different permutations of the word
+
 def string_permutation(word)
   return [] if word.size == 0
   return [word] if word.size == 1
@@ -60,19 +71,30 @@ puts string_permutation 'abc'
 
 # pp string_permutation('abcd')
 
-# def comb word
-#   return [] if word.size == 0
-#   return [word] if word.size == 1
+# sudo code:
 
-#   first = word[0]
-#   reminder = word[1..-1]
-#   words = comb(reminder)
-#   words.inject([first]) do |memo, value|
-#     memo << value + first
-#     memo << value
-#     memo
-#   end
-# end
+# 1. return empty array if word size is 0
+#    return itself if word size is 1
+# 2. split first letter, and put reminder into recursive function
+#    results should be an array of reminder words combinations
+# 3. interate each word in the results, and for each one,
+#    we can add the first letter into it or we can choose not to add the first letter.
+# 4. return the combinations.
+
+
+def comb word
+  return [] if word.size == 0
+  return [word] if word.size == 1
+
+  first = word[0]
+  reminder = word[1..-1]
+  words = comb(reminder)
+  words.inject([first]) do |memo, value|
+    memo << value + first
+    memo << value
+    memo
+  end
+end
 
 # @result = ''
 # def comb_optimized word, index

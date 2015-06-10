@@ -64,22 +64,3 @@ describe 'sort array of strings' do
     table.should eql(['god', 'dog', 'abc', 'cba', 'man'])
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

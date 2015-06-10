@@ -1,19 +1,29 @@
 require 'pry'
 
+# sudo code:
+
+# 1. initialize two strings, one longest string and one current string,
+#    a hash to keep track of frequency of characters
+
 def longest_substring_which_contains_two_unique_characters(string)
   longest = ''
   current = ''
-  hash = {}
+  hash = Hash.new(0)
 
   string.split('').each do |s|
-    if hash[s]
-      current += s
+    current += s
+
+    if hash[s] > 0
+      hash[s] += 1
     else
-      hash[s] = true
+      hash[s] += 1
       if hash.size > 2
         longest = longest.length > current.length ? longest : current
-        hash = {}
-        current = ''
+        # binding.pry
+        pair = hash.min_by{|k,v| v}
+        hash.delete(pair[0])
+
+        current = current[1..-1]
       else
         current += s
       end

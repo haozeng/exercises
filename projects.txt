@@ -1,0 +1,42 @@
+marqeta:
+
+1, migration project
+consumer core -> authorize.net
+payment api -> authorize.net
+migrate all payment consumer core to payment api
+have environmental variables built in to turn on/off this feature in staging or production
+
+2, merchant portal -> proxy server built
+backbone.js application and it needs to talk with our consumer api and payment api
+intead of using cross-domain ajax, we decided to use proxy server in merchant portal
+because unlike our consumer api, the payment api that are unsecured, nothing like token based authentication
+by having a proxy server, we allow those requests behind a firewall.
+
+
+wink:
+
+1, mass-zigbee feature -> group feature
+
+zigbee/zwave
+hub1/hub2
+ge/philips/cree
+light_bulb/lock
+
+each device has a local_id associated with it in each hub
+
+map devices in the hub to the devices in the server
+server -> agent -> hub
+hub -> agent -> server
+hub_group_table: 
+hub_id, hub_group_id, radio_type, manufacturer_device_model, device_id, device_type, members
+
+2, admin-portal (authentication, impersonation)
+talk about authentication and impersonation
+
+in oauth specs,
+first trial: authenticate as a app, using 'client_credential flows', bad, we need to change core apis
+second trail: impersonate as the user, using access_token, refresh_token just like mobiles clients without chaning apis
+and we save user authentication_token in memcacache per admin.
+
+3, ifttt-project (triggers, actions)
+actions/triggers

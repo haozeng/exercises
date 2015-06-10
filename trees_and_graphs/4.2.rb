@@ -31,6 +31,15 @@ child_1.left = grand_child_1
 root.left = child_1
 root.right = child_2
 
+# Given a directed graph, design an algorithm to find out whether there is a route
+# between two nodes
+
+# Use breadth first search
+# BFS: use queue as its data structure
+# 1. for each node, add the node into the queue
+# 2. shift the node and check its value.
+# 3. add its children node into the the queue as well
+
 def bfs(node, a, b)
   matched = []
   queue = [node]

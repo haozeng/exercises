@@ -26,7 +26,6 @@ node1 = Node.new(node2, node3, 1)
 
 # in_order_transverse(node1)
 
-
 def pre_order_transverse(node)
   stack = []
   stack.push(node)

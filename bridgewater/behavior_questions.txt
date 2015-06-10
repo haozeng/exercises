@@ -1,0 +1,106 @@
+Insights:
+
+alan at marqeta; be straightforward
+i want to better understand myself and understand how the world works
+
+1. projects I've worked on
+
+Wink-API (backend APIs design for mobile and our satelitte apps)
+Customer Service Portal (authentication using client auth and impersonation from my previous job)
+IFTTT Project
+A few gems which we used to integrate our partnership (we tried to maintain the same interface throughout our apps, but our partners have different standards in their API implementation, thus we need to standardize them in our ends.)
+
+2. times when my boss asked me to do things don't make sense
+
+Marqeta (Data Migration Project) Core API and Customer APP; we need to migrate all existing payment api in Customer APP to Core APIs.
+
+Made sense in the beginning, and later I told my boss to give it up; because we changed the direction and all backend projects started be dedicated in Node.js API (transactions)/Building APIs for our partnership (IVR project), and it's not worth the time. I sensed something is wrong, and decided to talk with my supervisor, and he agreed.
+
+
+Wink (Bug fixing, temperatory fixing) which I don't agree, and I think we should investigate more time in architecture refactor and redesign instead of fixing bugs in the short term. Eventually, they will burn us in the long run.
+
+UPC (universal product code) project, we maintained upc in Core API, and bugs are everywhere in both staging and production; everytime for a new package shipping to the store, we have to add their individual upcs. Without upcs, app won't be able to display the logos and differentiate what kinda of device it is, etc. 
+
+I fixed too many of its issue and I decided to tell my boss. Shared Project which will be one standalone project that can be shared across both staging and production, and our sales team can enter upcs diretly in a separate web portal. In the end, our core API will just consume its APIs.
+
+
+3. times when I had to react quickly in one situation
+Marqeta (at that times, I was a full stack developer)
+
+unicorn server crash: passenger vs Unicorn
+unicorn achives zero-down time deployment easily; it's more like a automated process.
+
+staging works without problem and it was that afternoon that i decied to switch that in production. all of a sudden, 500 appears everywhere and our whole office (50 people) was on fire; people are yelling that the whole site is crashing. I was sweating all over. I was with my supervisor at that time, and he told me to calm down; i still appreciate the trust that he put on me in the first year of my job. The first reaction is to roll over the process completely as we have a back-up plan. To switch back from unicorn to passenger.
+
+hacking purchase deal:
+One time the our sales manager realized that one guy purchase 10 promotion deals from us in 1 minute. And we are worried about more hacks, and they asked me to investigate. There is no Front-end validation, back-end validation. The user just changed the data in the form in the chrome browser. I went through the logs and find that bugs, and patched it in backend first and use javascript to prevent it from happending in the front-end.
+
+
+admin-portal crash:
+
+I built the app for over 100 customer representatives in schenetdady office. Sometimes, they started yell and complain in the slack. I had to take a look at that whenever this is an outage happening. In this app, I built the features which different layers of reps (3 layers) can access various features. There is one time that the layer stops working completely. So i had to revert to a previous deployment and started the debugging process and tried to catch the bug in staging. (we didn't test thoroughly in staging.) I spent 2 days in debugging this without any progress even from helps from my colleagues. The encrypted data in the cookie disappeared somehow for our app from my conversation with one of rep, and so I decied to use unencrypted data in the cookie.
+
+hub crash:
+
+It was early morning and I just woke up. My boss called me and said we had an outage and it is serious and they want me to build an app immediately for our customer reps. The deadline is by the end of today. I started working and spent 3 hours finishing up the app. I didn't eat, brush my teeth, and just working on that app for the whole morning. (we know what version of hub is broken and we have to tell difference between people who had bad hubs called and people who had bad hubs don't call, and make different rescue plans for each group.)
+
+
+4. Passion and link to the job:
+
+Learning & Exploring & Helping people
+
+'Berkeley Physics' and 'Customer Service Portal helping customer over 80 reps to resolve issues' and 'Volunteer Triage duty', 'Fix bugs in my down time'
+
+5. Current company position in the Industry, and where we are different from others
+
+Good parts:
+stay ahead of game, strong relationships with a lot of our investors and partners, strong team. We used a lot of advanced technology (voice control) and many techonology which other firm can just use one (zigbee, zwave, wifi, blutooth, etc.)
+
+Bad parts:
+we are moving too fast; we cared less about customer experiences.
+we care about building features/integrating more partners instead of fixing existing bugs and optimize performance.
+
+I think the internet of things for family use just started, 2% of us family current have one smart device. I personally believe that we want to spend as much time in making our early adopters love our products. Because it takes time for everyoen in the society to realise at what we are doing, to change their mind set. Just like the first version of Ipod in 2004, it completely changed the peoples' vision about APPLE, and it had a such huge impact in the later years. So i think creating a culture which allows us to trully embrace optimizing customer experience will help us in the long term.
+
+
+5. How would you improve a company through transparency?  
+
+1) The leader has to step up and promote the principles of transparency in whatever way possible. Otherwise, it is not just gonna work. It seems so easy, but it is so hard to get it enforced.
+example: transparency -> hiring at marqeta.
+
+
+6. how many windows in NYC ? how to approach it ? no need to be precise
+
+new york area ->
+  building -> (high-rise low-rise houses)
+  transportaions -> (buses, cars, subways, trains)
+
+
+7. For the final round, what really threw me was "tell me the failures that have led you to where you are now".
+
+Marqeta - Passenger to Unicorn app server migration
+
+causes: staging != production environment; the way we provisioned the server is not the same in both servers initially; no procedures review requested by me(just like code review); I was overconfident and a bit impatient, and wanted to get things done to make our platform better.
+
+what i've learned:
+requires team work; procedures review; i should be patient and more cautious took more time in making sure to be ready for a better back-up plan. perform high-stake jobs this in less traffic hours.
+
+
+8. tell me about your weaknesses.
+
+Doing things to fast. I code too fast sometimes. This can be a good thing sometimes when there is an outage and people need me to help. Sometimes, especially in my startups, since a lot of times you have to make decisions yourself. I tended to make design decisions too quick without fully considering the best possible ways. In the short term, since you are the only one who built the project and it is good, because i built things and make it run. In the long run, sometimes the design can be hard to maintain and the flaw is obvious and can be avoided by spending more time in the beginning. I also found out that things like this tend to get minimized when I am working in a group or pair coding. I tried to minimize the impact of my weakness by slowing myself down during the work. Sometimes, I intentionally took a 20-minutes break after some design works, or I waited tomorrow to see if there is something else i can do.
+
+
+
+
+
+
+
+
+
+
+
+
+During the behavioral section of the interview, I was asked only one question: what is your passion? From the comments I received, the purpose of the question is to assess your fit with the company. It seems like they base the quality of your answer on how closely and directly it fits with the nature of the job. If I could redo it, I would have tried to establish a stronger link between my passion and the job description.
+
+It was followed by a phone interview with a manager. The conversation was actually completely non-technical, and mostly involved finding out "why" I made the choices in my career and how I dealt with certain professional situations. He also asked about my opinions on where my current company is headed in its industry, and its high level business strategy. What they wanted to see is if the candidate has strong opinions on a subject, and whether he/she can articulate and communicate these ideas clearly. Bridgewater's culture is heavily based on "truthful" communications to the point of brutal honesty, and the interviewer's attitude reflected that culture quite clearly.

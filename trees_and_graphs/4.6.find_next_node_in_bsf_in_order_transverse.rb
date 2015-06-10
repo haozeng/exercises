@@ -30,6 +30,16 @@ class TreeNode
 end
 
 # Find next node in a BSF using in-order tranverse
+# http://en.wikipedia.org/wiki/Tree_traversal#In-order_.28symmetric.29
+
+# sudo code:
+
+# 1. if node right exists, then move pointer to node right
+#    recursively search node left is node left exist and move pointer to node left
+#    return the current pointer.
+# 2. if node right does not exist
+#    while node is the parent's node right node, keep move the pointer to the parent
+#    return the current pointer.
 
 def find_next_node(node)
   if node.right

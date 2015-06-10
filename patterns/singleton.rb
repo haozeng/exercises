@@ -29,7 +29,7 @@ class SimpleLogger
   end
 
   def info(msg)
-    @log.pus(msg) if @level >= INFO
+    @log.puts(msg) if @level >= INFO
     @log.flush
   end
 end

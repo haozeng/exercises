@@ -19,6 +19,17 @@ class Node
   end
 end
 
+# Given a sorted (increasing order) array with unique integer elements,
+# write an algorithm to create a binary search tree with minimal height.
+
+# Sudo code:
+
+# 1. take the middle element in the array and treat it as the middle node.
+# 2. divide the left half and right half of the array
+# 3. put the left half into the recursive function and it is the left branch
+# 4. put the right half into the recursive function and it is the right branch
+
+
 def create_BST(array)
   mid = (array.length - 1)/2
   tree = Node.new({:value => array[mid]})

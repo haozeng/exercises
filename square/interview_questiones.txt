@@ -1,0 +1,7 @@
+There's a tree, a squirrel, and several nuts. Positions represented by a matrix, like x, y. And the goal is to find the minimal distance for the squirrel find the nuts and put them into the tree one by one.
+
+How to code a program that gives you the day of the week given a date.
+
+The first problem I got was writing an arithmetic expression parser with only parentheses and the '+' sign. This was fairly straightforward. Then, he asked to parse a list of expressions instead of just one. Then, some expressions could reference others in the list (e.g. A3 + 1) which was as far as we got. I successfully wrote the code but I think he was displeased with my messy design as it was "patched through" on the initial design. Eventually the recruiter informed me that I need to do another coderpad session.
+
+The second interview was much like the first. The problem this time was to write a class scheduler, where each class could have multiple time slots and we need to choose a combination of times so that we can take each class. I tried this time to focus on designing it properly in OO but it took so much time that I was only able to reach one evolution of the problem - return all possible arrangements instead of just the first. I haven't received an official response yet but I'm pretty sure I effed this one up as I was probably expected to reach at least step 3 or 4. Oh well..

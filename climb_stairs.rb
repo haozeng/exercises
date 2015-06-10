@@ -22,8 +22,8 @@ def climb_stairs_two(n)
   @cache_two[n] = climb_stairs_two(n-1) + climb_stairs_two(n-2)
 end
 
-# pp climb_stairs(4)
+pp climb_stairs(4)
 pp climb_stairs_two(4)
 
-# pp climb_stairs(9)
+pp climb_stairs(9)
 pp climb_stairs_two(9)

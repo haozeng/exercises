@@ -1,6 +1,11 @@
 require 'pry'
 require 'pp'
 
+# sudo code:
+
+# 1. divide the unsorted list into n subsets.
+# 2. repeated merge sublists to produce the newly sorted sublist until only 1 sublit remains.
+
 def merge_sort(array)
   return array if array.length == 1
   mid = (array.length - 1)/ 2
@@ -16,7 +21,6 @@ def merge(left, right)
   end
   sorted + left + right
 end
-
 
 pp merge_sort([2,3,1,4])
 pp merge_sort([2,3,1])

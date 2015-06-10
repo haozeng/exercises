@@ -40,6 +40,8 @@ else
   true
 end
 
+# Check if a binary tree is a binary search tree
+
 def check_if_bst(node)
   if node.left
     unless node.left.value < node.value

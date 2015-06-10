@@ -48,6 +48,14 @@ end
 
 #3.4
 
+# sudo code:
+
+# 1. while stack a is not empty, pop one element from stack a, name it as temp
+# 2. while stack b is not empty, and the top element of stack b is larger than temp 
+#    add the top element of stack b back to stack a
+# 3. put the tmp element in stack b
+# 4. print out stack b
+
 def sort_stacks(list)
   a = Stack.new(list)
   b = Stack.new
@@ -120,10 +128,3 @@ describe 'New Queue Class' do
     @queue.dequeue.should eql 1
   end
 end
-
-
-
-
-
-
-

@@ -1,5 +1,12 @@
 require 'pry'
 
+# sudo code:
+
+# 1, initialize a max sum and a current sum
+# 2, add current element into current sum, and if result is less than zero, reset current sum to 0
+# 3, compare current element with max sum, if current sum is larger than max sum, relace the max sum with current sum.
+# 4, return maxSum
+
 def continuous_sequence(array)
   maxSum = 0
   sum = 0
@@ -32,6 +39,15 @@ def max_slice_brute_force(array)
     max_sub
   end
 end
+
+# sudo code:
+
+# 1, initialize max array, current array
+# 2, start iterate the array, and add current element into current arrary
+# 3, if current array is larger than max array, then replace max array with current array
+# 4, if current array is smaller than max array, then do nothing.
+# 5, if current array is less the zero, then reset current array to empty array
+# 6, print out the max array
 
 def max_slice(array)
   max = []
