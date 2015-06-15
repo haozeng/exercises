@@ -19,10 +19,16 @@ class Node
   end
 end
 
-def find_height(tree)
-  return 0 if tree == nil
+def check_complete_binary_search_tree(node)
+  return 0 if node.nil?
 
-  return 1 + [find_height(tree.left), find_height(tree.right)].max
+  left = check_complete_binary_search_tree(node.left)
+  right = check_complete_binary_search_tree(node.right)
+
+  return false unless left && right
+  return false if (left - right).abs > 1
+
+  [left, right].max + 1
 end
 
 root = Node.new({:value => 1, :name => 'root'})
@@ -35,5 +41,4 @@ child_1.left = grand_child_1
 root.left = child_1
 root.right = child_2
 
-height = find_height(root)
-puts height
+puts check_complete_binary_search_tree(root)
